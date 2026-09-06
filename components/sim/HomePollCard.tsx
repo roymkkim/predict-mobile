@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Animated, Easing, Image, Pressable, Text, View } from "react-native";
 import {
   FontWeight,
@@ -8,8 +8,6 @@ import {
 } from "@metamask/design-system-react-native";
 
 import { MetaTag } from "@/components/sim/MetaHeader";
-import { SectionHeader } from "@/components/sim/FeedChrome";
-import { SnapHScroll } from "@/components/sim/SnapHScroll";
 import { colors, marketAccentColor } from "@/lib/sim/colors";
 import { NBA, NFL, NFL_CAR_ARI, NFL_GB_PIT } from "@/lib/sim/data";
 import { geist } from "@/lib/sim/geistFonts";
@@ -34,8 +32,6 @@ const TEAM_ROW_H = AVATAR + BAR_GAP + BAR_H;
 const TEAMS_GAP = 12;
 const TEAMS_SLOT_H = TEAM_ROW_H * 2 + TEAMS_GAP;
 const RESULT_EASE = Easing.bezier(0.16, 1, 0.3, 1);
-const CARD_GAP = 12;
-const CARD_PEEK = 36;
 
 type PollOutcome = {
   side: HomePollSide;
@@ -318,19 +314,5 @@ export function HomePollCard({ item, width }: { item: HomePollItem; width?: numb
 }
 
 export function HomePollCarousel({ gutter = 16 }: { gutter?: number }) {
-  const [vw, setVw] = useState(0);
-  const itemW = vw ? Math.max(240, vw - gutter * 2 - CARD_PEEK) : 0;
-
-  return (
-    <View onLayout={(e) => setVw(e.nativeEvent.layout.width)} style={{ paddingTop: 16 }}>
-      <SectionHeader title="What people predict" showChevron={false} />
-      {itemW > 0 ? (
-        <SnapHScroll gutter={gutter} interval={itemW + CARD_GAP} gap={CARD_GAP}>
-          {HOME_POLL_ITEMS.map((item) => (
-            <HomePollCard key={item.id} item={item} width={itemW} />
-          ))}
-        </SnapHScroll>
-      ) : null}
-    </View>
-  );
+  return null;
 }
