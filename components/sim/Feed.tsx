@@ -81,7 +81,6 @@ import { CombinationsSection } from "./CombinationsSection";
 import { LiveGamesCarousel } from "./LiveGamesCarousel";
 import { LiveCardsCarousel } from "./LiveCardsCarousel";
 import { HomeSocialTicker } from "./HomeSocialTicker";
-import { HomePollCarousel } from "./HomePollCard";
 import { getSlidesKind } from "@/lib/sim/slidesDemo";
 import { useSportsIa } from "@/lib/sim/sportsIaStore";
 import { useMmProposalControls } from "@/lib/sim/mmProposalStore";
@@ -736,16 +735,11 @@ export function Feed({ onComboBuy, categorySelect }: { onComboBuy?: (picks: impo
 
   return (
     <View style={{ gap: FEED_SECTION_GAP }}>
-      {(balanceCardHasContent || socialUx) && (
-        <View style={{ gap: socialUx && balanceCardHasContent ? 16 : 0 }}>
-          {balanceCardHasContent ? (
-            <View style={{ paddingHorizontal: gutter }}>
-              <ProdBalanceCard noticeDismissed={noticeDismissed} onCloseNotice={() => setNoticeDismissed(true)} />
-            </View>
-          ) : null}
-          {socialUx ? <HomePollCarousel gutter={gutter} /> : null}
+      {balanceCardHasContent ? (
+        <View style={{ paddingHorizontal: gutter }}>
+          <ProdBalanceCard noticeDismissed={noticeDismissed} onCloseNotice={() => setNoticeDismissed(true)} />
         </View>
-      )}
+      ) : null}
       {!balanceCardHasContent && showCombinationsBanner ? (
         <View style={{ paddingHorizontal: gutter }}>
           <CombinationsBanner />
