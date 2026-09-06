@@ -1,0 +1,21 @@
+/* Finger-pad cursor for the web phone sim. pointer: fine = mouse/trackpad only. */
+@media (pointer: fine) {
+  html,
+  body,
+  *,
+  *::before,
+  *::after {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='15' fill='none' stroke='%23000' stroke-opacity='0.4' stroke-width='2'/%3E%3Ccircle cx='18' cy='18' r='13.5' fill='%23fff' fill-opacity='0.22' stroke='%23fff' stroke-width='1.75'/%3E%3C/svg%3E")
+        18 18,
+      auto !important;
+  }
+
+  html:active,
+  html:active *,
+  body:active,
+  body:active * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='11.5' fill='none' stroke='%23000' stroke-opacity='0.45' stroke-width='2'/%3E%3Ccircle cx='18' cy='18' r='10' fill='%23fff' fill-opacity='0.4' stroke='%23fff' stroke-width='1.75'/%3E%3C/svg%3E")
+        18 18,
+      auto !important;
+  }
+}

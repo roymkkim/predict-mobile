@@ -1,0 +1,40 @@
+/* Future type: Inter body + Oswald titles and large numbers. Loaded always;
+   rules only apply when html[data-typeface="future"]. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap");
+
+html[data-typeface="future"],
+html[data-typeface="future"] body,
+html[data-typeface="future"] #root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html[data-typeface="future"] [style*="Geist_400Regular"],
+html[data-typeface="future"] [style*="Geist-Regular"],
+html[data-typeface="future"] [style*="MMSans-Regular"],
+html[data-typeface="future"] [style*="MMPoly-Regular"] {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 400 !important;
+}
+html[data-typeface="future"] [style*="Geist_500Medium"],
+html[data-typeface="future"] [style*="Geist-Medium"],
+html[data-typeface="future"] [style*="MMSans-Medium"] {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 500 !important;
+}
+html[data-typeface="future"] [style*="Geist_600SemiBold"],
+html[data-typeface="future"] [style*="Geist-SemiBold"],
+html[data-typeface="future"] [style*="MMSans-Bold"] {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 600 !important;
+}
+html[data-typeface="future"] [style*="Geist_700Bold"],
+html[data-typeface="future"] [style*="Geist-Bold"] {
+  font-family: Inter, system-ui, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+html[data-typeface="future"] [data-predictions-title="true"],
+html[data-typeface="future"] [data-oswald="true"] {
+  font-family: Oswald, sans-serif !important;
+  font-weight: 600 !important;
+}

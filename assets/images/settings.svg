@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <!-- Single filled 6-tooth cog: solid teeth, ring, hub. No stroke / outline. -->
+  <path
+    fill="currentColor"
+    stroke="none"
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M8.475 5.895 L10.462 5.12 L9.786 2.094 L14.214 2.094 L13.538 5.12 L15.525 5.895 L17.189 7.228 L19.471 5.13 L21.686 8.965 L18.727 9.892 L19.05 12 L18.727 14.108 L21.686 15.035 L19.471 18.87 L17.189 16.772 L15.525 18.105 L13.538 18.88 L14.214 21.906 L9.786 21.906 L10.462 18.88 L8.475 18.105 L6.811 16.772 L4.529 18.87 L2.314 15.035 L5.273 14.108 L4.95 12 L5.273 9.892 L2.314 8.965 L4.529 5.13 L6.811 7.228 Z M12 7.15 a4.85 4.85 0 1 1 0 9.7 a4.85 4.85 0 1 1 0 -9.7 Z"
+  />
+  <circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/>
+</svg>

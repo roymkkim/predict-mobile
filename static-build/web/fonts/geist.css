@@ -1,0 +1,45 @@
+/* DS Text uses Geist-Regular / Geist-Medium / Geist-SemiBold.
+   RN Text uses Geist_400Regular etc. with font-weight: 400 (the family name
+   encodes the weight). Omit font-weight so any element weight matches. */
+@font-face { font-family: "Geist-Regular"; src: url("/fonts/Geist-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Geist-Medium"; src: url("/fonts/Geist-Medium.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Geist-Medium"; src: url("/fonts/Geist-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Geist-SemiBold"; src: url("/fonts/Geist-SemiBold.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Geist-Bold"; src: url("/fonts/Geist-Bold.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Geist-RegularItalic"; src: url("/fonts/Geist-Regular.ttf") format("truetype"); font-style: italic; font-display: swap; }
+@font-face { font-family: "Geist-MediumItalic"; src: url("/fonts/Geist-Medium.ttf") format("truetype"); font-style: italic; font-display: swap; }
+@font-face { font-family: "Geist-SemiBoldItalic"; src: url("/fonts/Geist-SemiBold.ttf") format("truetype"); font-style: italic; font-display: swap; }
+
+@font-face { font-family: "Geist_400Regular"; src: url("/fonts/Geist-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Geist_500Medium"; src: url("/fonts/Geist-Medium.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Geist_500Medium"; src: url("/fonts/Geist-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Geist_600SemiBold"; src: url("/fonts/Geist-SemiBold.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Geist_700Bold"; src: url("/fonts/Geist-Bold.ttf") format("truetype"); font-display: swap; }
+
+@font-face { font-family: "MMSans-Regular"; src: url("/fonts/Geist-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "MMSans-Medium"; src: url("/fonts/Geist-Medium.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "MMSans-Medium"; src: url("/fonts/Geist-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "MMSans-Bold"; src: url("/fonts/Geist-SemiBold.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "MMPoly-Regular"; src: url("/fonts/Geist-Regular.ttf") format("truetype"); font-display: swap; }
+
+html:not([data-typeface="future"]),
+html:not([data-typeface="future"]) body,
+html:not([data-typeface="future"]) #root {
+  font-family: "Geist-Regular", "Geist_400Regular", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* RN-web writes font-family onto the style attribute. Force a stack that
+   includes the DS names (which load) plus sans-serif so Times cannot win. */
+html:not([data-typeface="future"]) [style*="Geist_400Regular"] {
+  font-family: "Geist-Regular", "Geist_400Regular", system-ui, sans-serif !important;
+}
+html:not([data-typeface="future"]) [style*="Geist_500Medium"] {
+  font-family: "Geist-Medium", "Geist_500Medium", system-ui, sans-serif !important;
+}
+html:not([data-typeface="future"]) [style*="Geist_600SemiBold"] {
+  font-family: "Geist-SemiBold", "Geist_600SemiBold", system-ui, sans-serif !important;
+}
+html:not([data-typeface="future"]) [style*="Geist_700Bold"] {
+  font-family: "Geist-SemiBold", "Geist_700Bold", system-ui, sans-serif !important;
+}
